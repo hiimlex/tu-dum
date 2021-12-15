@@ -7,3 +7,8 @@ export interface BoredActivity {
   link: string;
   key: string;
 }
+
+export interface TaskContextProps {
+  getTasks: () => BoredActivity[];
+  setTasks: (tasks: BoredActivity[]) => void;
+}

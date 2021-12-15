@@ -1,7 +1,8 @@
 <script lang="ts">
   import { getContext, onMount } from "svelte";
+  import type { TaskContextProps } from "../../app/api/models/bored";
 
-  const { getTasks } = getContext("task");
+  const { getTasks, setTasks } = getContext<TaskContextProps>("task");
 
   onMount(() => {
     const _tasks = getTasks();
