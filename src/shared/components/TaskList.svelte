@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { tasks } from "../../app/store/task";
-	import AddTask from "./AddTask.svelte";
+	import HeaderTaskList from "./HeaderTaskList.svelte";
 	import Task from "./Task.svelte";
 </script>
 
 <main class="m-content">
-	<AddTask />
+	<HeaderTaskList />
 
 	{#each $tasks as task}
 		{#await task then data}
