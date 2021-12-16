@@ -13,17 +13,17 @@
   .m-header__container {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     padding: 12px;
     width: 100%;
 
-    margin-bottom: 24px;
+    margin-bottom: 4px;
   }
 
   .m-header__title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 500;
   }
 
