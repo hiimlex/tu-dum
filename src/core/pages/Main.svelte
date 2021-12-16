@@ -32,4 +32,11 @@
 		height: 100vh;
 		overflow: hidden;
 	}
+
+	@media (max-width: 1028px) {
+		.m-content {
+			padding: 0;
+			border-radius: 0;
+		}
+	}
 </style>

@@ -3,17 +3,28 @@
 
 	import { tasks } from "../../app/store/task";
 
+	let completedChange = false;
+
 	const handleNewActivity = async () => {
 		const { data } = await getActivity();
 
 		$tasks = [...$tasks, data];
 	};
 
-	$: completed = 0;
+	let completed = 0;
 
-	$: if ($tasks) {
-		completed = $tasks.filter((task) => task.done).length;
-	}
+	tasks.subscribe((value) => {
+		const _completed = value.filter((task) => task.done).length;
+
+		if (completed !== _completed) {
+			completed = _completed;
+			completedChange = true;
+
+			setTimeout(() => {
+				completedChange = false;
+			});
+		}
+	});
 </script>
 
 <div class="a-task__container">
@@ -25,7 +36,12 @@
 	<hr class="a-container__divider" />
 
 	<div class="a-container__info">
-		<span class="c-info__doned"><b>COMPLETED:</b> {completed} </span>
+		<span class="c-info__doned">
+			<b>COMPLETED:</b>
+			<span style="padding: 4px;" class:completed={completedChange}
+				>{completed}</span
+			>
+		</span>
 	</div>
 </div>
 
@@ -83,6 +99,10 @@
 		font-size: 0.9rem;
 		font-weight: 500;
 		color: #7d868d;
+
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 	}
 
 	.c-info__doned b {
