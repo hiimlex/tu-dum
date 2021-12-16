@@ -3,9 +3,19 @@
   import type { BoredActivity } from "../../app/api/models/bored";
   import { getActivity } from "../../app/api/services/api";
   import Header from "../../shared/components/Header.svelte";
-  import TaskList from "../../shared/components/TaskList.svelte";
+  import Tasks from "../../shared/components/Tasks.svelte";
 
-  let tasks: BoredActivity[] = [];
+  let tasks: BoredActivity[] = [
+    {
+      accessibility: 0.3,
+      activity: "Buy a new house decoration",
+      key: "3456114",
+      link: "",
+      participants: 1,
+      price: 0.4,
+      type: "recreational",
+    },
+  ];
 
   setContext("task", {
     getTasks: () => tasks,
@@ -19,7 +29,7 @@
 
 <div class="m-container">
   <Header />
-  <TaskList />
+  <Tasks />
 </div>
 
 <style>
