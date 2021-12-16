@@ -26,11 +26,12 @@
 		align-items: flex-start;
 		justify-content: flex-start;
 		width: 100%;
-		border-radius: 24px;
+		border-radius: 32px;
 		background: #f0f4f7;
 		padding: 32px;
 		height: 100vh;
 		overflow: hidden;
+		box-shadow: 4px 4px 32px 12px rgba(0, 0, 0, 0.1);
 	}
 
 	@media (max-width: 1028px) {

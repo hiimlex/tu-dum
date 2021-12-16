@@ -25,6 +25,7 @@
 		width: 100%;
 		background-color: #fff;
 		padding: 32px;
+		border-radius: 4px;
 		border-top-right-radius: 28px;
 		border-bottom-left-radius: 28px;
 

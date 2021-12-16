@@ -83,6 +83,7 @@
 		font-weight: 300;
 		color: #279af9;
 		line-height: 100%;
+		cursor: pointer;
 	}
 
 	.a-container__info {

@@ -15,7 +15,7 @@
 
 <style>
 	:global(body) {
-		background-color: #fff;
+		background-color: #279af9;
 		color: #878382;
 		font-size: 62.5%;
 		margin: 0;
