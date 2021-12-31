@@ -6,7 +6,7 @@
 	let completedChange = false;
 
 	const handleNewActivity = async () => {
-		const { data } = await getActivity();
+		const data = await getActivity();
 
 		$tasks = [...$tasks, data];
 	};
